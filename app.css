@@ -1,0 +1,136 @@
+:root {
+  --light: #ecf0f1;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+header {
+  background-color: #0f2027;
+  color: #ecf0f1;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+header h1 {
+  margin: auto;
+  font-size: 3rem;
+
+}
+
+#container {
+  flex: 1;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#container > section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+section h2,
+section p {
+  color: var(--light);
+}
+
+.challenge-container .challenge-responses {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.score{
+
+  position: absolute;
+  right: 10%;
+
+
+}
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 20%;
+  padding: 25px;
+  background-color: #ecf0f1;
+  box-shadow: #333 1px 5px 8px;
+  border-radius: 10%;
+}
+.cocktail-description{
+  color: #ecf0f1;
+  font-size: 20px;
+}
+
+.challenge-container .card img {
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+  margin: 30px;
+  border-radius: 10%;
+}
+
+button {
+  border: none;
+  background-color: #0f2027;
+  border-radius: 15px;
+  color: #ecf0f1;
+  font-size: 1.4rem;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover{
+
+  background-color: #204f59;
+  transition: 0.5s ease-in-out;
+  transform: scale(1.1);
+
+}
+
+.hide {
+  display: none !important;
+}
+
+.end-container p {
+
+  font-size: 2rem;
+}
+
+.end-container button, .start-container button {
+
+  font-size: 2rem;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-top: 3px solid var(--light);
+
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Title</title>
+
+  <link rel="stylesheet" href="app.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+<!-- Faire un conteneur de cartes en grid
+5 cocktails par row
+4 boutons avec le choix du nom des cocktails en dessous
+chaque bonne réponse = 1 pts !-->
+
+<header>
+  <h1>Which Cocktail ?</h1>
+  <div class="score">Your score : <span class="score-number">0</span></div>
+</header>
+
+<main id="container">
+  <section class="start-container">
+    <h2>Testez vos connaissances en cocktails</h2>
+    <div class="loader"></div>
+    <button class="hide">Commencer</button>
+  </section>
+
+  <section class="challenge-container hide">
+    <h2>Quel est ce cocktail ?</h2>
+    <div class="card">
+      <img src="" alt="Cocktail à devenir" class="cocktailImg" />
+      <div class="challenge-responses"></div>
+    </div>
+
+    <button class="moreInfo"> + d'infos</button>
+    <div class="cocktail-description hide"></div>
+  </section>
+
+  <section class="end-container hide">
+    <p>Score final: <span class="score-number">0</span></p>
+    <button onclick="nextChallenge()">Recommencer</button>
+  </section>
+</main>
+</body>
+</html>
